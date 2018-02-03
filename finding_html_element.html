@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>finding html Element</title>
+</head>
+<body>
+	<form id="dari1" action="">
+		Nama Pertama: <input type="text" name="nm1" placeholder="Nama">
+		Nama Kepanjangan <input type="text" name="nm2" placeholder="Nama Kepanjangan">
+		<input type="submit" value="Input">
+	</form>
+	<p>Klik Disini untuk Melihat hasil dari Element</p>
+	<button onclick="fungsifrom()">Coba Disini</button>
+	<p id="tampil"></p>
+	<script type="text/javascript">
+		function fungsifrom() {
+			var x = document.forms["dari1"];
+			var text = "";
+			var i;
+			for (i = 0; i < x.length; i++) {
+				text += x.elements[i].value + "<br>";
+			}
+			document.getElementById("tampil").innerHTML = text;
+		}
+	</script>
+</body>
+</html>

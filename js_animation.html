@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS animation</title>
+	<style type="text/css">
+		#container {
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			background: yellow;
+		}
+		#animasi {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<button onclick="pindah()">
+			Klik disini
+		</button>
+	</p>
+		<div id="container">
+		<h1 onclick="mengunakantext(this)">Kilk Disini reaksinya</h1>	
+		</div>
+		<div id="animasi">
+		<h1 onclick="this.innerHTML = 'Waduh'">Klik Disini Untuk Melihat</h1>
+		<p>Klik Disini untuk menampilkan waktu</p>
+		<button onclick="waktu()">
+			waktu Sekarang
+		</button>
+		<p id="waktu"></p>
+		</div>
+	<script type="text/javascript">
+		function pindah() {
+			var kotak = document.getElementById("animasi");
+			var pos = 0;
+			var id = setInterval(frame, 40);
+			function frame() {
+				if (pos == 360) {
+					clearInterval(id);
+				} else {
+					pos++;
+					kotak.style.top = pos + 'px';
+					kotak.style.left = pos + 'px';
+				}
+			}
+		}
+		function mengunakantext(id) {
+			id.innerHTML = "Waduh ok";
+		}
+		function waktu() {
+			document.getElementById("waktu").innerHTML = Date();
+		}
+	</script>
+</body>
+</html>

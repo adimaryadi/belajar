@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+		#arah {
+			background-color: coral;
+			border: 1px solid;
+			padding: 50px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	Nama Kamu : <input type="text" id="nama" onchange="uppercase()">
+	<p></p>
+	<br>
+	<div onmouseover="over(this)" onmouseout="out(this)" style="background-color: tomato;width: 120px;height: 20px;padding: 40px;">
+		Arahkan Mouse Anda Ke Area ini
+	</div>
+	<br>
+	<div onmousedown="down(this)" onmouseup="up(this)" style="background-color: blue; width: 90px;height: 20px;padding: 40px;">
+		Klik Disini
+	</div>
+	<br>
+	<button id="peringatan">
+		Peringatan
+	</button>
+	<br>
+	<button id="kedua">
+		Berurutan Peringatan
+	</button>
+	<br>
+	<div id="arah">
+		div ini telah mengunakan onmousemove arahkan kursor anda pada area ini maka ada nomor Acak di bawah
+		<p>Klik Button Di Bawah untuk Berhenti</p>
+		<button onclick="berhenti()" id="berhenti">
+			Berhenti
+		</button>
+	</div>
+	<h1 id="nomor"></h1>
+	<script type="text/javascript">
+		function over(obj) {
+			obj.innerHTML = "Hade Pisan"
+		}
+		function out(obj) {
+			obj.innerHTML = "Sakali Deui"
+		}
+		function down(obj) {
+			obj.style.backgroundColor = "red";
+			obj.innerHTML = "Berubah";
+		}
+		function up(obj) {
+			obj.style.backgroundColor = "green";
+			obj.innerHTML = "nuhun";
+		}
+		document.getElementById("peringatan").addEventListener("click", function(){
+			alert("awas Lagi Ngetes");
+		});
+		var x = document.getElementById("kedua");
+		x.addEventListener("click", pertama);
+		x.addEventListener("click", kedua);
+		function pertama() {
+			alert ("nama saya");
+		}
+		function kedua() {
+			alert("Fungsi Kedua Tlah Di eksekusi");
+		}
+		function uppercase() {
+			var x = document.getElementById("nama");
+			x.value = x.value.toUpperCase();
+		}
+		document.getElementById("arah").addEventListener("mousemove", random);
+		function random() {
+			document.getElementById("nomor").innerHTML = Math.random();
+		}
+		function berhenti() {
+			document.getElementById("arah").removeEventListener("mousemove", random);
+		}
+	</script>
+</body>
+</html>

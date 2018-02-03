@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>button</title>
+</head>
+<body>
+<h2>Ini Contoh Heading 2</h2>
+<p id="ok"> Ini Contoh Paragraf</p>
+<p>bakdokdoakdoakdoa dadada tes jquery</p>
+<button>Klik Disini tes Jquery</button>
+<br>
+<h2 class="test">contoh ke dua</h2>
+<p class="test">kokdoaskdoaksdo</p>
+<p>asdjiasjdiajdiates</p>
+<button class="button">Klik</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#ok").hide();
+		});
+	});
+	$(document).ready(function(){
+		$(".button").click(function(){
+			$(".test").hide();
+		});
+	});
+</script>
+</html>

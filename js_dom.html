@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Dom</title>
+</head>
+<body>
+<p>Hallo Boss</p>
+<p>ini Contoh demostrasi <b>ambildariElementTagname</b>dengan method</p>
+<p id="dom_demo"></p>
+<br>
+<p id="waktu"></p>
+<br>
+<p id="coba">test</p>
+<br>
+<p>header lama</p>
+<br>
+<p>tes gambar js</p>
+<img src="gambar/1.png" alt="" id="gambar">
+<h1 id="header">header lama</h1>
+<script type="text/javascript">
+	var x = document.getElementsByTagName("p");
+	document.getElementById("dom_demo").innerHTML = 'Paragraf Yang Pertama adalah(index 0) :' + x[0].innerHTML;
+	document.write(Date());
+	document.getElementById("coba").innerHTML = "text baru";
+	var element = document.getElementById("header");
+	element.innerHTML = "header baru";
+	document.getElementById("gambar").src = "gambar/landscape.png";
+</script>
+</body>
+</html>

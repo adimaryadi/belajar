@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change color</title>
+</head>
+<body>
+	<p>Hello Tes</p>
+	<button onclick="color()">
+		Coba
+	</button>
+	<script type="text/javascript">
+		function color() {
+			var koleksi = document.getElementsByTagName("p");
+			var i;
+			for (i = 0; i < koleksi.length; i++) {
+				koleksi[i].style.color = "red";
+			}
+		}
+	</script>
+</body>
+</html>

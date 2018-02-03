@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>screen</title>
+</head>
+<body>
+	<p id="width"></p>
+	<p id="height"></p>
+	<br>
+	<p>Link Web Yang Di Akses</p>
+	<p id="link"></p>
+	<script type="text/javascript">
+		document.getElementById("width").innerHTML = "Ukuran lebar Layar Anda Adalah " + screen.width;
+		document.getElementById("height").innerHTML = "Ukuran tinggi Layar Anda adalah " + screen.height;
+		document.getElementById("link").innerHTML = "Url Yang Anda Sedang Di akses " + window.location.href;
+	</script>
+</body>
+</html>
